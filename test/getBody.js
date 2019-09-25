@@ -107,7 +107,7 @@ describe('when proxy request is a GET', function () {
 
   it('should deliver empty object get body', function (done) {
     var nockedPostWithoutBody = nock('http://127.0.0.1:12345')
-      .get('/', {})
+      .get('/', '')
       .matchHeader('Content-Type', 'application/json')
       .reply(200, {
         name: 'get with object body'
